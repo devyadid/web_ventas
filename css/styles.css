@@ -1,0 +1,143 @@
+/*colores primariso*/
+:root{
+    --primario: #9c27b0;
+    --primarioOscuro:#89119D;
+    --secundario:#ffce00;
+    --secundarioOscuro:rgb(233,284,2);
+    --blanco:#ffffff;
+    --nego:#000;
+    /*fuente principal*/
+    --fuentePrincipal: 'Staatliches', cursive;
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+/*Globales*/
+body{
+    background-color: var(--primario);
+    font-size: 1.6rem;
+    line-height: 1.5;/*interlineado*/
+}
+p{
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;/*todos los parafor usaran la fuente*/
+    color: var(--blanco);
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+.contenedor{
+    max-width: 120rem;
+    /*margin: o auto; /*para centrarpero es obsoleto*/
+    display: grid; 
+    justify-content: center;
+}
+h1, h2, h3{
+    text-align: center;
+    color: var(--secundario);
+    font-family: var(--fuentePrincipal);
+}
+h1{font-size: 4rem;}
+h2{font-size: 3.2rem;}
+h3{font-size: 2.4rem;}
+/*.golbales*/
+/*header*/
+.header{
+    display: flex;
+    justify-content: center;
+}
+.header__logo{
+    margin: 3rem 0;
+}/*.header*/
+/**footer**/
+.footer{
+    background-color: var(--primario);
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+.footer__texto{
+    font-family: var(--primarioOscuro);
+    text-align: center;
+    font-size: 2.2rem;
+}
+/**.footer**/
+/*Navegacion*/
+.navegacion{
+    background-color: var(--primarioOscuro);
+    padding: 1rem 0;/*aumentar el tamaño de espacio*/
+    display: flex;
+    justify-content: center;
+    gap: 2rem;/*separar los elementos*/
+}
+.navegacion__enlace{
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+    font-size: 2.5rem;
+}
+.navegacion__enlace:last-of-type{/*pseudo selector que escoje el ultimo elemento similar*/
+    margin-right: 0;
+}
+.navegacion__enlace--activo, 
+.navegacion__enlace:hover {
+    color:var(--secundario);
+}
+body .navegacion{
+    display: flex;
+    justify-content: center;
+}
+/**GRID**/
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    /**column-gap: 2rem;/*separacion dento del grid horisontal*/
+    /**row-gap: 2rem;/*separacion del grid verticalmente*/
+    gap: 2rem;/*resumen horizontal y vertical*/
+}
+@media (min-width: 768px){
+    .grid{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+/*480 - pantalla esta*/
+/**.Grid**/
+/**Productos**/
+.producto{
+    background-color: var(--primarioOscuro);
+    padding: 1rem;
+}
+.producto__imagen{
+    width: 100%;
+}
+.producto__informacion{
+
+}
+.producto__nombre{
+    font-size: 4rem;
+}
+.producto__precio{
+    font-size: 2.8rem;
+    color: var(--secundario);
+}
+.producto__nombre, .producto__precio{
+    font-family: var(--blanco);
+    margin: 1rem 0;/*margen 10px ariba y 0 abajo*/
+    text-align: center;
+    line-height: 1.2;/*espacio entre linea*/
+}
+/***graficos*/
+.grafico{
+
+}
+.graficos--camisas{
+
+}
+.graficos--node{
+    
+}
